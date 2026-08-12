@@ -33,7 +33,7 @@ export function Hero() {
                 Ver productos
               </Link>
               <Link
-                href="/#cotizacion"
+                href="/cotizacion"
                 className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep bg-surface-primary px-6 py-3 text-center text-sm font-semibold text-brand-green-deep transition-colors hover:bg-brand-green-deep hover:text-surface-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-soft"
               >
                 Solicitar cotización

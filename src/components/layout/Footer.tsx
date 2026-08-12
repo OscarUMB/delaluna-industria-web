@@ -5,7 +5,9 @@ import { Container } from "@/components/ui/Container";
 const footerNavigation = [
   { href: "/", label: "Inicio" },
   { href: "/#productos", label: "Productos" },
-  { href: "/#contacto", label: "Contacto" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/soluciones", label: "Soluciones" },
+  { href: "/contacto", label: "Contacto" },
 ] as const;
 
 export function Footer() {

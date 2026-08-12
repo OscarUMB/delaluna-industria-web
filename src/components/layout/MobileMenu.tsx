@@ -54,14 +54,16 @@ export function MobileMenu({ navigationItems }: MobileMenuProps) {
 
               <div className="mt-4 grid gap-3 border-t border-brand-green-deep/20 pt-4 sm:grid-cols-2">
                 <Link
-                  href="/#cotizacion"
+                  href="/cotizacion"
                   className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-green-deep px-4 text-center text-sm font-semibold text-surface-primary hover:bg-brand-green-leaf hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary"
                   onClick={closeMenu}
                 >
                   Solicitar Cotización
                 </Link>
                 <Link
-                  href="/#whatsapp"
+                  href="https://wa.me/573000000000?text=Hola,%20quisiera%20información%20sobre%20los%20productos%20institucionales"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep px-4 text-center text-sm font-semibold text-brand-green-deep hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary"
                   onClick={closeMenu}
                 >
