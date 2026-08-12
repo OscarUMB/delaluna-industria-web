@@ -79,7 +79,7 @@ export default function AboutPage() {
             {pendingApprovedCopy}
           </p>
           <Link
-            href="/#contacto"
+            href="/contacto"
             className="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-md bg-brand-green-deep px-6 py-3 text-center text-sm font-semibold text-surface-primary transition-colors hover:bg-brand-green-leaf hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary sm:w-auto"
           >
             Contactar a un asesor

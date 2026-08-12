@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -rf .next && next build",
+    "build": "rm -rf .next && NEXT_DEPLOYMENT_ID=${NEXT_DEPLOYMENT_ID:-$(date +%s)} next build",
     "start": "next start",
     "lint": "eslint"
   },
