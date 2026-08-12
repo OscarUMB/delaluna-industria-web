@@ -18,7 +18,8 @@ export function Hero() {
               id="hero-title"
               className="max-w-3xl font-serif text-4xl leading-tight font-semibold text-brand-green-deep sm:text-5xl lg:text-6xl"
             >
-              Limpieza que cuida de ti y del planeta
+              Limpieza profesional que cuida de tu empresa, tu hogar y el
+              planeta
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-text-primary/80 sm:text-lg sm:leading-8">
               Desarrollamos y comercializamos soluciones de limpieza e higiene
