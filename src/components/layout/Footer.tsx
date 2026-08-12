@@ -4,10 +4,11 @@ import { Container } from "@/components/ui/Container";
 
 const footerNavigation = [
   { href: "/", label: "Inicio" },
-  { href: "/#productos", label: "Productos" },
+  { href: "/productos", label: "Productos" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/soluciones", label: "Soluciones" },
   { href: "/contacto", label: "Contacto" },
+  { href: "/cotizacion", label: "Cotización" },
 ] as const;
 
 export function Footer() {
@@ -30,7 +31,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="font-medium text-text-primary hover:text-brand-green-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep"
+                    className="inline-flex min-h-11 min-w-11 items-center justify-center font-medium text-text-primary transition-colors hover:text-brand-green-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep motion-reduce:transition-none"
                   >
                     {item.label}
                   </Link>

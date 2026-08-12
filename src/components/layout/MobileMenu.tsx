@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Container } from "@/components/ui/Container";
 
@@ -16,14 +16,33 @@ interface MobileMenuProps {
 
 export function MobileMenu({ navigationItems }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
+
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
+        ref={triggerRef}
         type="button"
-        className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep px-4 text-sm font-semibold text-brand-green-deep hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary"
+        className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep px-4 text-sm font-semibold text-brand-green-deep transition-colors hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary motion-reduce:transition-none"
         aria-controls="mobile-navigation"
         aria-expanded={isOpen}
         onClick={() => setIsOpen((currentState) => !currentState)}
@@ -55,7 +74,7 @@ export function MobileMenu({ navigationItems }: MobileMenuProps) {
               <div className="mt-4 grid gap-3 border-t border-brand-green-deep/20 pt-4 sm:grid-cols-2">
                 <Link
                   href="/cotizacion"
-                  className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-green-deep px-4 text-center text-sm font-semibold text-surface-primary hover:bg-brand-green-leaf hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary"
+                  className="inline-flex min-h-11 items-center justify-center rounded-md bg-brand-green-deep px-4 text-center text-sm font-semibold text-surface-primary transition-colors hover:bg-brand-green-deep/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary motion-reduce:transition-none"
                   onClick={closeMenu}
                 >
                   Solicitar Cotización
@@ -64,7 +83,7 @@ export function MobileMenu({ navigationItems }: MobileMenuProps) {
                   href="https://wa.me/573000000000?text=Hola,%20quisiera%20información%20sobre%20los%20productos%20institucionales"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep px-4 text-center text-sm font-semibold text-brand-green-deep hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary"
+                  className="inline-flex min-h-11 items-center justify-center rounded-md border border-brand-green-deep px-4 text-center text-sm font-semibold text-brand-green-deep transition-colors hover:bg-surface-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green-deep focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary motion-reduce:transition-none"
                   onClick={closeMenu}
                 >
                   WhatsApp

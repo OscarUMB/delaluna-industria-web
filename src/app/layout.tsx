@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="es" className="h-full">
       <body
         className={`${inter.variable} ${playfairDisplay.variable} flex min-h-full flex-col bg-surface-primary font-sans text-text-primary antialiased`}
       >

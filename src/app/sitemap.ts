@@ -5,6 +5,7 @@ import { productCatalog } from "@/content/products/catalog";
 const defaultSiteUrl = "https://productosdelaluna.com";
 const staticRoutes = [
   "/",
+  "/productos",
   "/nosotros",
   "/soluciones",
   "/contacto",
