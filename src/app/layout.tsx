@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { Container } from "@/components/ui/Container";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -23,7 +28,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body
         className={`${inter.variable} ${playfairDisplay.variable} flex min-h-full flex-col bg-surface-primary font-sans text-text-primary antialiased`}
       >
-        {children}
+        <Header />
+        <main id="contenido-principal" className="flex-1 py-8 sm:py-10">
+          <Container>{children}</Container>
+        </main>
+        <Footer />
       </body>
     </html>
   );
