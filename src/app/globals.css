@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+:root {
+  --brand-green-deep: #165c3a;
+  --brand-green-leaf: #5aa33f;
+  --brand-blue-clean: #1e88e5;
+  --brand-aqua: #17b6d2;
+  --brand-yellow: #f6b900;
+  --surface-primary: #ffffff;
+  --surface-soft: #f7f7f4;
+  --text-primary: #263238;
+}
+
+@theme inline {
+  --color-brand-green-deep: var(--brand-green-deep);
+  --color-brand-green-leaf: var(--brand-green-leaf);
+  --color-brand-blue-clean: var(--brand-blue-clean);
+  --color-brand-aqua: var(--brand-aqua);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-soft: var(--surface-soft);
+  --color-text-primary: var(--text-primary);
+}
